@@ -1,0 +1,4 @@
+Latex code that generates no output (but does not only contain whitespace) will
+create a very big image because dvips does not cut it.
+
+See the code for other minor issues.

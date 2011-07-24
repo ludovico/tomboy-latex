@@ -1,0 +1,26 @@
+<Addin id="LatexAddin"
+    namespace="Tomboy"
+    name="LaTeX Math Formulas"
+    author="Christian Reitwiessner"
+    description="Automatically converts LaTeX math code into images."
+    url="http://www.reitwiessner.de/programs/tomboy-latex.html"
+    category="Tools"
+    defaultEnabled="false"
+    version="0.7">
+
+    <Runtime>
+        <Import assembly="Latex.dll" />
+    </Runtime>
+
+    <Dependencies>
+        <Addin id="Tomboy" version="0.10" />
+    </Dependencies>
+
+    <Extension path="/Tomboy/NoteAddins">
+        <NoteAddin type="Tomboy.Latex.LatexAddin" />
+    </Extension>
+
+    <Extension path="/Tomboy/AddinPreferences">
+        <AddinPreferenceFactory type="Tomboy.Latex.LatexPreferenceFactory" />
+    </Extension>
+</Addin>

@@ -1,0 +1,19 @@
+2007-09-24  v0.4
+
+	* migration to the Mono.Addins interface
+
+2007-04-06  v0.3
+
+	* some stability bugfixes
+
+2007-03-16  v0.2
+
+	* image generation is done in separate thread and cached
+
+2007-03-11
+
+	* uses bigger font now
+
+2007-03-09  v0.1
+	
+	* Initial release

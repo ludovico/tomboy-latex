@@ -1,0 +1,30 @@
+AC_INIT(src/Latex.cs)
+AM_INIT_AUTOMAKE(tomboy-latex, 0.5)
+AM_MAINTAINER_MODE
+
+AC_PROG_INSTALL
+
+#
+# Find mcs
+#
+AC_PATH_PROG(MCS, mcs)
+if test "x$MCS" = "x" ; then
+	AC_MSG_ERROR([Can't find "mcs", the mono compiler in your PATH])
+fi
+
+#
+# Finds the tomboy addins interface
+#
+PKG_CHECK_MODULES(TOMBOY_ADDINS, tomboy-addins)
+AC_SUBST(TOMBOY_ADDINS_LIBS)
+
+#
+#Find the tomboy addin dir
+#
+TOMBOY_ADDINSDIR=$($PKG_CONFIG --variable=addinsdir tomboy-addins)
+AC_SUBST([TOMBOY_ADDINSDIR])
+
+AC_OUTPUT([
+Makefile
+src/Makefile
+])
