@@ -1,12 +1,11 @@
 Tomboy LaTeX Addin
-----------------------
+==================
 
 Requirements
 ------------
 This addin requires:
 * tomboy-0.7 or higher
-* LaTeX including the ams package on the PATH
-* convert (ImageMagick) on the PATH
+* LaTeX including the ams package dvipng on in the PATH
 
 For older versions of tomboy please use an older version of this
 addin/plugin since the tomboy interface has changed.
@@ -15,9 +14,10 @@ Build and Install
 -----------------
 Simply run
 
-./configure
-make
-make install (as root)
+    ./autogen.sh
+    ./configure
+    make
+    make install (as root)
 
 It should install the addin in the tomboy addins directory.
 You can then install it via the tomboy interface (or copy the Latex.dll
